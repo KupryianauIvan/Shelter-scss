@@ -1,0 +1,29 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Arial;
+  src: url(../../assets/fonts/Arial/ARIAL.TTF);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Arial;
+  src: url(../../assets//fonts/Arial/ARIALI.TTF);
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: Georgia;
+  src: url(../../assets/);
+  font-weight: 400;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'Georgia', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
