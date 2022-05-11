@@ -1,0 +1,14 @@
+.footer__wrapper {
+  padding: 40px 40px 0;
+  background-image: url("../../assets/images/start-screen/start-screen-gradient-background.png");
+  background-position: center 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.footer__image > img {
+  display: block;
+}
+.layout-3-column {
+  gap: 160px;
+  align-items: flex-start;
+}

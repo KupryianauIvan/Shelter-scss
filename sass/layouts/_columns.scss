@@ -1,0 +1,7 @@
+.layout-2-column {
+  @include columns($width: 35%, $justify: center, $direction: row-reverse, $gap: 40px);
+}
+
+.layout-3-column {
+  @include columns($width: 30%, $justify: center, $direction: row, $gap: 20px);
+}

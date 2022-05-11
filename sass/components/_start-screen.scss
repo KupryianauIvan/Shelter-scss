@@ -1,0 +1,28 @@
+.section-start__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 60px;
+  background-image: url("../../assets/images/start-screen/start-screen-gradient-background.png");
+  background-position: center -90px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-start__content {
+  padding-right: 42px;
+}
+.section-start__image > img {
+  display: block;
+}
+.section-start__subheading {
+  width: 460px;
+  @extend %font-add;
+  @include font (1.5rem, 2.4rem);
+  letter-spacing: 0;
+  color: $color-dark-s;
+  margin-bottom: 42px;
+}
+.section-start__heading {
+  margin-bottom: 42px;
+}

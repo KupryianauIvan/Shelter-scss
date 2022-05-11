@@ -1,0 +1,23 @@
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+  background-image: url("../../assets/images/start-screen/start-screen-gradient-background.png");
+  background-position: center 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo__heading {
+  margin: 0 0 10px;
+}
+.logo__subheading {
+  @extend %font-add;
+  @include font(1.3rem, 1.5rem);
+  letter-spacing: 0.01em;
+  color: $color-light-xl;
+}
+.header__wrapper > a {
+  display: inline-block;
+  text-decoration: none;
+}

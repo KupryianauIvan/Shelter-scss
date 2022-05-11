@@ -1,0 +1,10 @@
+.section-heading {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  &_colored {
+    text-align: left;
+    color: $color-light-xl;
+    margin-bottom: 35px !important;
+  }
+}

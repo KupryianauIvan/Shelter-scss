@@ -1,0 +1,13 @@
+.help__wrapper {
+  padding: 80px 40px 100px;
+}
+.help__container {
+  @include flex ($justify:center, $direction:row, $align:center);
+  flex-wrap: wrap;
+  >* { 
+    margin-right: 120px;
+  }
+}
+.section-heading {
+  margin-bottom: 60px;
+}

@@ -1,0 +1,11 @@
+.card {
+  @include flex($justify:space-between, $direction:column, $align:center);
+  background-color: $color-light-xl;
+  padding: 0 0 45px;
+  @extend %transition;
+  cursor: pointer;
+  &:hover .button_bordered {
+    background-color: $color-primary;
+    cursor: pointer;
+  }
+}

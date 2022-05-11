@@ -1,0 +1,3 @@
+.option {
+  @include flex($justify:space-between, $direction:column, $align:center);
+}

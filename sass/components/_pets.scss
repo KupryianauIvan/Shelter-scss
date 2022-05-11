@@ -1,0 +1,19 @@
+.pets__wrapper {
+  background: $color-light-l;
+  padding: 80px 40px 100px;
+}
+.pets__container {
+  @include flex($justify: space-between, $direction:row);
+  @extend %margin-bottom;
+}
+.pets-button {
+  max-width: 261px;
+  margin: auto;
+}
+.layout-3-column {
+  justify-content: space-between;
+  gap: 90px;
+}
+.pets__section-heading {
+  margin-bottom: 60px;
+}
