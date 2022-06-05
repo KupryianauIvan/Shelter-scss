@@ -9,7 +9,7 @@
   <title>Shelter-SCSS</title>
 </head>
 
-<body>
+<body onresize="screenResize()">
   <header class="header">
     <div class="wrapper header__wrapper">
       <a href="#" class="logo">
@@ -43,9 +43,9 @@
         <ul class="navigation">
           <li class="navigation__item"><a href="#" class="navigation__link navigation__link_active">About the
               shelter</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Our pets</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Help the shelter</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Contacts</a></li>
+          <li class="navigation__item"><a href="#pets" class="navigation__link">Our pets</a></li>
+          <li class="navigation__item"><a href="#help" class="navigation__link">Help the shelter</a></li>
+          <li class="navigation__item"><a href="#footer" class="navigation__link">Contacts</a></li>
         </ul>
       </nav>
      <span class="hamburger hamburger_active">
@@ -143,7 +143,7 @@
         </div>
       </div>
     </section>
-    <section class="help">
+    <section class="help" id="help">
       <div class="wrapper help__wrapper">
         <h3 class="section-heading">How you can help<br>
           our shelter</h3>

@@ -1,8 +1,12 @@
 .burger-menu {
-  display: none;
+  display: block;
   width: 32.5rem;
   height: 110vh;
+  position: fixed;
+  top: 0;
+  right: -620px;
   background-color: $color-button;
+  @extend %transition;
   &_active {
     position: fixed;
     display: block;

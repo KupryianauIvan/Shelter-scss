@@ -449,7 +449,7 @@ template {
   display: none;
 }
 
-.burger-menu__link, .navigation__link, .card, .hamburger, .ico, .button-arrow, .button {
+.burger-menu__link, .burger-menu, .navigation__link, .card, .hamburger, .ico, .button-arrow, .button {
   transition: all 0.3s ease-in;
 }
 
@@ -467,6 +467,7 @@ template {
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -671,25 +672,27 @@ h4, h5 {
 }
 
 .hamburger {
-  display: none;
+  display: block;
   position: relative;
   width: 3rem;
   height: 2.2rem;
+  transform-origin: center;
+  z-index: 1000;
 }
 @media (max-width: 320px) {
   .hamburger {
-    display: inline-block;
     position: fixed;
     right: 0;
     top: 4.5rem;
-    z-index: 11;
+    z-index: 1000;
     margin-right: 3rem;
     justify-content: space-between;
   }
 }
 .hamburger_active {
   display: inline-block;
-  z-index: 12;
+  z-index: 1000;
+  transform: rotate(90deg);
 }
 .hamburger:before {
   top: 0;
@@ -1332,9 +1335,12 @@ h4, h5 {
 }
 
 .burger-menu {
-  display: none;
+  display: block;
   width: 32.5rem;
   height: 110vh;
+  position: fixed;
+  top: 0;
+  right: -620px;
   background-color: #292929;
 }
 .burger-menu_active {
@@ -1401,6 +1407,10 @@ h4, h5 {
 
 .opacity {
   opacity: 0;
+}
+
+.overflow {
+  overflow-y: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
