@@ -1,24 +1,38 @@
 .navigation {
   display: flex;
   align-items: center;
-  @include font(1.5rem, 2.4rem)
+  @include font(1.5rem, 2.4rem);
+  @include media-tablet {
+    padding-left: 0px;
+  }
+  @include tablet-to-laptop {
+    padding-left: 0;
+  }
 }
-
 .header__navigation {
   margin-left: auto;
+  @include media-mobile {
+    display: none;
+  }
+  @include mobile-to-tablet {
+    display: none;
+  }
 }
-
 .navigation__item {
   list-style: none;
   padding: 0 20px;
+  @include media-tablet {
+    padding: 0 20px 0 0;
+    &:last-child {
+      padding-right: 0px;
+    }
+  }
 }
-
 .navigation__link {
   color: $color-dark-s;
   text-decoration: none;
   @extend %transition;
   @extend %font-add;
-
   &:hover {
     color: $color-light-s;
   }
@@ -27,7 +41,6 @@
 .navigation__link_active {
   position: relative;
   color: $color-light-s;
-
   &:after {
     content: '';
     position: absolute;

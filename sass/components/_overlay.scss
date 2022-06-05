@@ -1,0 +1,16 @@
+.overlay {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(41, 41, 41, 0.6);
+  z-index: 2;
+  &_hidden {
+    display: none;
+  }
+}
+.opacity {
+  opacity: 0;
+}

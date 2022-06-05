@@ -12,15 +12,16 @@
 @import "./base/headings";
 @import "./base/buttons";
 @import "./base/icons";
+@import "./base/hamburger";
 
 //Layout
 @import "./layouts/wrapper";
 @import "./layouts/header";
 @import "./layouts/columns";
+@import "./layouts/footer";
 
 //Components
 @import "./components/donation";
-@import "./components/footer";
 @import "./components/option";
 @import "./components/help";
 @import "./components/card";
@@ -28,3 +29,5 @@
 @import "./components/start-screen";
 @import "./components/navigation";
 @import "./components/about";
+@import "./components/burger-menu";
+@import "./components/overlay";

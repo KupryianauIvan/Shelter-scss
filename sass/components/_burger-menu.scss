@@ -1,0 +1,47 @@
+.burger-menu {
+  display: none;
+  width: 32.5rem;
+  height: 110vh;
+  background-color: $color-button;
+  &_active {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    z-index: 10;
+  }
+  &__heading {
+    padding: 3rem 11rem 0rem 1rem;
+  }
+  &__list {
+    width: 32rem;
+    @include flex($justify: space-between, $direction: column, $align: center);
+    padding: 16rem 3rem 0rem 1rem;
+  }
+  &__item {
+    list-style: none;
+    margin-bottom: 4rem;
+  }
+  &__link {
+    color: $color-dark-s;
+    @include font($size: 3.2rem, $height: 5.1rem);
+    text-decoration: none;
+    @extend %transition;
+    &_active {
+      position: relative;
+      color: $color-light-xl;
+      &:after {
+        position: absolute;
+        content: "";
+        right: 0;
+        left: 0;
+        bottom: -1rem;
+        height: 0.3rem;
+        background-color: $color-primary;
+      }
+    }
+    &:hover {
+      color: $color-light-xl; 
+    }
+  }
+}

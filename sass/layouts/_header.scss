@@ -1,20 +1,42 @@
+.header {
+  position: static;
+  @include media-mobile {
+    position: sticky;
+    top: 0.05rem;
+  }
+}
 .header__wrapper {
   display: flex;
-  align-items: center;
   padding-top: 60px;
   background-image: url("../../assets/images/start-screen/start-screen-gradient-background.png");
   background-position: center 0;
   background-size: cover;
   background-repeat: no-repeat;
+  @include media-tablet {
+    padding-top: 30px;
+  }
+  @include media-mobile {
+    padding-top: 30px;
+    justify-content: space-between;
+  }
+  @include mobile-to-tablet {
+    justify-content: space-between;
+  }
 }
 
 .logo__heading {
   margin: 0 0 10px;
+  font-size: 3.2rem;
+  line-height: 3.5rem;
+  color: $color-primary;
+  @include media-tablet {
+    max-width: 186px;
+  }
 }
 .logo__subheading {
   @extend %font-add;
   @include font(1.3rem, 1.5rem);
-  letter-spacing: 0.01em;
+  letter-spacing: 0.1em;
   color: $color-light-xl;
 }
 .header__wrapper > a {

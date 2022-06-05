@@ -1,11 +1,30 @@
 .card {
   @include flex($justify:space-between, $direction:column, $align:center);
   background-color: $color-light-xl;
-  padding: 0 0 45px;
   @extend %transition;
   cursor: pointer;
   &:hover .button_bordered {
     background-color: $color-primary;
     cursor: pointer;
+  }
+  @include media-tablet {
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+  @include media-mobile {
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+  &__image img {
+    width: 100%;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 41.5px;
   }
 }

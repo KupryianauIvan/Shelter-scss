@@ -1,18 +1,27 @@
 .pets__wrapper {
   background: $color-light-l;
   padding: 80px 40px 100px;
+  @include media-tablet {
+    padding: 80px 30px 100px;
+  }
+  @include media-mobile {
+    padding: 42px 0px;
+  }
 }
 .pets__container {
+  position: relative;
   @include flex($justify: space-between, $direction:row);
   @extend %margin-bottom;
+  @include media-mobile {
+    justify-content: center;
+  }
+  @include mobile-to-tablet {
+    justify-content: space-around;
+  }
 }
 .pets-button {
   max-width: 261px;
   margin: auto;
-}
-.layout-3-column {
-  justify-content: space-between;
-  gap: 90px;
 }
 .pets__section-heading {
   margin-bottom: 60px;

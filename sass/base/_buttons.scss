@@ -35,4 +35,22 @@
     cursor: pointer;
     background-color: $color-primary;
   }
+  &_left {
+    @include mobile-to-tablet {
+      display: none;
+    }
+  }
+  &_right {
+    @include mobile-to-tablet {
+      display: none;
+    }
+  }
 }
+.arrow-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  @include tablet-to-laptop {
+    display: none;
+  }
+} 

@@ -2,9 +2,17 @@
   max-width: 400px;
   margin: auto;
   text-align: center;
+  margin-bottom: 60px;
   &_colored {
     text-align: left;
     color: $color-light-xl;
     margin-bottom: 35px !important;
+    @include media-mobile {
+      text-align: center;
+    }
+  }
+  @include media-mobile {
+    @include font($size: 2.5rem, $height: 3.2rem);
+    margin-bottom: 25px;
   }
 }

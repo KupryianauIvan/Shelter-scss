@@ -18,6 +18,27 @@
           Shelter for pets in Boston
         </p>
       </a>
+     <!-- Burger menu starts -->
+      <div class="overlay overlay_hidden"></div>
+     
+      <div class="burger-menu">
+        <div class="burger-menu__heading">
+          <div class="burger-menu__logo">
+            <h2 class="logo__heading">Cozy House</h2>
+            <p class="logo__subheading">Shelter for pets in Boston</p>
+          </div>
+        </div>
+
+        <ul class="burger-menu__list">
+          <li class="burger-menu__item"><a href="#" class="burger-menu__link burger-menu__link_active">About the shelter</a></li>
+          <li class="burger-menu__item"><a href="../../pages/pets/index.html" class="burger-menu__link">Our pets</a></li>
+          <li class="burger-menu__item"><a href="#help" class="burger-menu__link">Help the shelter</a></li>
+          <li class="burger-menu__item"><a href="#footer" class="burger-menu__link">Contacts</a></li>
+        </ul>
+      </div>
+
+     <!-- Burger menu ends -->
+
       <nav class="header__navigation">
         <ul class="navigation">
           <li class="navigation__item"><a href="#" class="navigation__link navigation__link_active">About the
@@ -27,13 +48,13 @@
           <li class="navigation__item"><a href="#" class="navigation__link">Contacts</a></li>
         </ul>
       </nav>
-      <!-- <div class="header__buttons">
-        <button class="language-button language-button_active">en</button>
-        <button class="language-button">/</button>
-        <button class="language-button">ru</button>
-      </div> -->
+     <span class="hamburger hamburger_active">
+       <span class="hamburger__line"></span>
+      </span>
     </div>
   </header>
+
+
   <main id="main">
     <section class="section-start">
       <div class="wrapper section-start__wrapper">
@@ -52,7 +73,7 @@
     </section> 
     <section class="about" id="about">
       <div class="wrapper about__wrapper">
-        <div class="layout-2-column">
+        <div class="layout-2-column layout-2-column_reverse">
           <div class="about__content">
             <h3 class="section-heading">About the shelter<br>“Cozy House”</h3>
             <p class="about__subheading">Currently we have 121 dogs and 342 cats on our hands and statistics show that
@@ -75,37 +96,47 @@
           are looking for a house
         </h3>
         <div class="pets__container">
-          <button class="button-arrow">&larr;</button>
+          <button class="button-arrow button-arrow_left">&larr;</button>
           <div class="layout-3-column">
             <div class="card">
               <div class="card__image">
                 <img src="../../assets/images/pets/pets-katrine.png" alt="Katrine">
               </div>
-              <p class="card__name">
-                Katrine
-              </p>
-              <button class="button button_bordered">Learn More</button>
+              <div class="card__info">
+                <p class="card__name">
+                  Katrine
+                </p>
+                <button class="button button_bordered">Learn More</button>
+              </div>
             </div>
             <div class="card">
               <div class="card__image">
                 <img src="../../assets/images/pets/pets-jennifer.png" alt="Jennifer">
               </div>
+              <div class="card__info">
               <p class="card__name">
                 Katrine
               </p>
               <button class="button button_bordered">Learn More</button>
+            </div>
             </div>
             <div class="card">
               <div class="card__image">
                 <img src="../../assets/images/pets/pets-woody.png" alt="Woody">
               </div>
+              <div class="card__info">
               <p class="card__name">
                 Katrine
               </p>
               <button class="button button_bordered">Learn More</button>
             </div>
+            </div>
           </div>
-          <button class="button-arrow">&rarr;</button>
+          <button class="button-arrow button-arrow_right">&rarr;</button>
+        </div>
+        <div class="arrow-container">
+          <button class="button-arrow arrow-container__button_left">&larr;</button>
+          <button class="button-arrow arrow-container__button_right">&rarr;</button>
         </div>
         <div class="pets-button">
           <button class="button button_bordered button_colored">Get to know the rest</button>
@@ -241,6 +272,7 @@
       </div>
     </div>
   </footer>
+  <script src="../main/script.js"></script>
 </body>
 
 </html>

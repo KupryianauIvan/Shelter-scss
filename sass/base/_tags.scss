@@ -10,6 +10,9 @@
   width: 30px;
   height: 23px;
   margin: 0 auto;
+  @include media-mobile {
+    margin-right: 15px;
+  }
 }
 
 .tag-pin {

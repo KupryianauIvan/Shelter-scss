@@ -1,3 +1,25 @@
 .about__wrapper {
-  padding: 80px 0 100px;
+  padding: 80px 30px 100px;
+  @include media-tablet {
+    padding-top: 0;
+  }
+}
+.about__content {
+  max-width: 430px;
+  @include media-tablet {
+    max-width: 430px;
+    margin-bottom: 80px;
+  }
+  @include media-mobile {
+    margin-bottom: 42px;
+  }
+}
+.about__subheading {
+  @include media-tablet {
+    max-width: 100%;
+    @include font($size: 1.5rem, $height: 2.4rem, $spacing: 0.04em);
+  }
+  @include media-mobile {
+    text-align: justify;
+  }
 }

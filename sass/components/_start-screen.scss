@@ -1,28 +1,70 @@
+%m-bottom {
+  margin-bottom: 42px;
+} 
+
 .section-start__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex($justify:space-between, $direction:row, $align:center);
   padding-top: 60px;
   background-image: url("../../assets/images/start-screen/start-screen-gradient-background.png");
   background-position: center -90px;
   background-repeat: no-repeat;
   background-size: cover;
+  @include media-tablet {
+    @include flex($justify:space-between, $direction:column, $align:center);
+    padding: 30px 0 90px;
+  }
+  @include media-mobile {
+    padding: 0px 30px 90px;
+    overflow: hidden;
+  }
+  @include mobile-to-tablet {
+    padding: 0px 10px;
+    margin-bottom: 40px;
+    background-position: center;
+  }
+  @include tablet-to-laptop {
+    background-position: center;
+  }
 }
-
 .section-start__content {
-  padding-right: 42px;
+  @extend %m-bottom;
+  @include flex($justify: space-between, $direction:column, $align:center)
+}
+.section-start__image {
+  @include media-tablet {
+    align-self: flex-end;
+  }
 }
 .section-start__image > img {
   display: block;
+  width: 100%;
+  @include media-tablet {
+    width: 100%;
+  }
+  @include media-mobile {
+    width: 100%;
+  }
 }
 .section-start__subheading {
-  width: 460px;
+  max-width: 460px;
   @extend %font-add;
   @include font (1.5rem, 2.4rem);
   letter-spacing: 0;
   color: $color-dark-s;
-  margin-bottom: 42px;
+  @extend %m-bottom;
+  @include media-mobile {
+    max-width: 300px;
+    text-align: center;
+  }
 }
 .section-start__heading {
-  margin-bottom: 42px;
+  @extend %m-bottom;
+  @include media-tablet {
+    align-self: flex-start;
+  }
+  @include media-mobile {
+    @include font($size: 2.5rem, $height: 3.2rem);
+    align-self: center;
+    text-align: center;
+  }
 }

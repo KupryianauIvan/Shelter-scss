@@ -1,0 +1,44 @@
+.footer__wrapper {
+  padding: 40px 40px 0;
+  background-image: url("../../assets/images/start-screen/start-screen-gradient-background.png");
+  background-position: center 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include media-mobile {
+    padding: 42px 10px 0px;
+  }
+}
+.footer__image > img {
+  display: block;
+}
+.footer__image {
+  // width: 100%;
+  @include tablet-to-laptop {
+    align-self: flex-end;
+  }
+}
+.layout-3-column {
+  gap: 90px;
+  align-items: flex-start;
+  @include media-tablet {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 60px;
+    >* {
+      flex-basis: 41%;
+    }
+  }
+  @include media-mobile {
+    >* {
+      flex-basis: 100%;
+    }
+  }
+  @include tablet-to-laptop {
+    gap: 0px;
+  }
+  @include mobile-to-tablet {
+    .footer-navigation {
+      flex-basis: 100%;
+    }
+  }
+}
