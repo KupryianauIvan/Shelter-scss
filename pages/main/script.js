@@ -35,3 +35,5 @@ const closeMenu = function(event) {
   }
 }
 NAV_LINKS.forEach((e) => e.addEventListener('click', closeMenu));
+
+
