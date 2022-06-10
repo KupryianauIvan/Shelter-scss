@@ -19,7 +19,7 @@ OVERLAY.addEventListener('click', () => {
 
 
 const screenResize = function() {
-  if (window.screen.width >= 769) {
+  if (window.screen.width >= 769 && BURGER_MENU.classList.contains('burger-menu_active')) {
     BURGER_MENU.classList.remove('burger-menu_active');
     OVERLAY.classList.add('overlay_hidden');
     HAMBURGER_TOGGLE.classList.remove('hamburger_active');

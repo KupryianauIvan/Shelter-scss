@@ -4,6 +4,9 @@ const btnArrowLeft = document.querySelector('.button-arrow_left');
 const sliderButtons = document.querySelectorAll('.button-arrow');
 const containerButtonRight = document.querySelector('.arrow-container__button_right');
 const containerButtonLeft = document.querySelector('.arrow-container__button_left');
+const popup = document.querySelector('.popup');
+const overlay = document.querySelector('.overlay');
+const closeButton = document.querySelector('.popup__button');
 
 const petsInfo = [
   {
@@ -133,9 +136,51 @@ function makeRandomSliderItem(direction) {
   }
 }
 
-
-
 btnArrowRight.addEventListener('click', () => makeRandomSliderItem('right'));
 btnArrowLeft.addEventListener('click', () => makeRandomSliderItem('left'));
 containerButtonRight.addEventListener('click', () => makeRandomSliderItem('right'));
 containerButtonLeft.addEventListener('click', () => makeRandomSliderItem('left'));
+
+
+
+function show(event) {
+  let item = event.target.closest('.card')
+  if (item.classList.contains('card')) {
+    popup.classList.add('popup_show');
+    overlay.classList.remove('overlay_hidden');
+    document.body.classList.add('overflow');
+    let petName = item.children[1].firstElementChild.innerHTML;
+    let petData = petsInfo.filter(item => item.name === petName)[0];
+    
+    let img  = document.querySelector('.popup__image');
+    let name = document.querySelector('.popup__heading');
+    let type = document.querySelector('.popup__type');
+    let description = document.querySelector('.popup__description');
+    let options = document.querySelectorAll('.popup__item');
+
+    name.innerHTML = petData.name;
+    type.innerHTML = `${petData.type} - ${petData.breed}`;
+    img.src = `${petData.img}`;
+    description.innerHTML = petData.description;
+    
+
+    options[0].innerHTML = `<span class="popup__span">Age:</span> ${petData.age}`;
+    options[1].innerHTML = `<span class="popup__span">Inoculations:</span> ${petData.inoculations}`;
+    options[2].innerHTML = `<span class="popup__span">Diseases:</span> ${petData.diseases}`;
+    options[3].innerHTML = `<span class="popup__span">Parasites:</span> ${petData.parasites}`;
+  }
+}
+
+function closeModal() {
+  popup.classList.remove('popup_show');
+  overlay.classList.add('overlay_hidden');
+  document.body.classList.remove('overflow');
+}
+
+overlay.addEventListener('click', function closeOverlay() {
+  overlay.classList.add('overlay_hidden');
+  popup.classList.remove('popup_show');
+  document.body.classList.remove('overflow');
+});
+closeButton.addEventListener('click', closeModal);
+petsSlider.addEventListener('click', show);
